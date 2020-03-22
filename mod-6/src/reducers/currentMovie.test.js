@@ -1,6 +1,3 @@
-// Note: This is only needed when running in CodeSandbox.io
-import "../setupTests";
-
 import { currentMoviePropChanged } from "../actions";
 import currentMovie from "./currentMovie";
 

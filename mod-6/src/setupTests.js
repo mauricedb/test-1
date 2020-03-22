@@ -3,7 +3,3 @@
 // expect(element).toHaveTextContent(/react/i)
 // learn more: https://github.com/testing-library/jest-dom
 import "@testing-library/jest-dom/extend-expect";
-
-// Note: This is only needed when running in CodeSandbox.io
-import { cleanup } from "@testing-library/react";
-afterEach(cleanup);

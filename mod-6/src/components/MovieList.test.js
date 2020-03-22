@@ -1,11 +1,13 @@
-// Note: This is only needed when running in CodeSandbox.io
-import "../setupTests";
-
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter, Router } from "react-router-dom";
 import { createMemoryHistory } from "history";
 import { MovieList } from "./MovieList";
+
+// Note: This is only needed when running in CodeSandbox.io
+import "@testing-library/jest-dom/extend-expect";
+import { cleanup } from "@testing-library/react";
+afterEach(cleanup);
 
 describe("The MovieList component", () => {
   test("dispatches the loadMovies() action when first rendered", () => {
