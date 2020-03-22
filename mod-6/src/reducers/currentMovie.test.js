@@ -1,8 +1,11 @@
+// Note: This is only needed when running in CodeSandbox.io
+import "../setupTests";
+
 import { currentMoviePropChanged } from "../actions";
 import currentMovie from "./currentMovie";
 
 describe("The currentMovie reducer", () => {
-  test("can load initial movies", () => {
+  test("can update a movie property", () => {
     const originalState = {
       id: 1,
       title: "Movie 1"

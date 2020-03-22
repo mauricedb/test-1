@@ -1,3 +1,6 @@
+// Note: This is only needed when running in CodeSandbox.io
+import "../setupTests";
+
 import { moviesLoaded, movieLoaded } from "../actions";
 import movies from "./movies";
 

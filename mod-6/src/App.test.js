@@ -1,3 +1,6 @@
+// Note: This is only needed when running in CodeSandbox.io
+import "../setupTests";
+
 import React from "react";
 import { render } from "@testing-library/react";
 import App from "./App";

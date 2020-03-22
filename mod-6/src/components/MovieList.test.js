@@ -1,3 +1,6 @@
+// Note: This is only needed when running in CodeSandbox.io
+import "../setupTests";
+
 import React from "react";
 import { render, fireEvent } from "@testing-library/react";
 import { MemoryRouter, Router } from "react-router-dom";
@@ -5,7 +8,7 @@ import { createMemoryHistory } from "history";
 import { MovieList } from "./MovieList";
 
 describe("The MovieList component", () => {
-  test("dispatches yje loadMovies() action when first rendered", () => {
+  test("dispatches the loadMovies() action when first rendered", () => {
     const loadMovies = jest.fn();
 
     render(<MovieList loadMovies={loadMovies} />);
@@ -28,7 +31,7 @@ describe("The MovieList component", () => {
     ];
     const { getByText, getAllByText } = render(
       <MemoryRouter>
-        <MovieList loadMovies={jest.fn()} movies={movies} />
+        <MovieList movies={movies} loadMovies={jest.fn()} />
       </MemoryRouter>
     );
 
@@ -50,7 +53,7 @@ describe("The MovieList component", () => {
 
     const { getByText } = render(
       <Router history={history}>
-        <MovieList loadMovies={jest.fn()} movies={movies} />
+        <MovieList movies={movies} loadMovies={jest.fn()} />
       </Router>
     );
 
